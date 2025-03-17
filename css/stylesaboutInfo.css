@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background: #2c2c2c;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    position: relative;
+}
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background: rgb(19, 18, 18);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+.back-button:hover {
+    background: rgb(255, 255, 255);
+    color: rgb(21, 20, 20);
+}
+.container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.title {
+    font-size: 18vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    width: 48%;
+    text-align: right;
+    animation: fadeIn 2s ease-in-out, gamerColor 7s infinite alternate;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 40%;
+    margin: 10vh 0;
+}
+.story {
+    font-size: 3vw;
+    max-width: 400px;
+    animation: fadeIn 2s ease-in-out;
+ }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes gamerColor {
+    0% { color: #ff6666; } 
+    10% { color: #ff9966; } 
+    20% { color: #ffcc66; } 
+    30% { color: #ccff66; } 
+    40% { color: #66ff99; } 
+    50% { color: #66ccff; } 
+    60% { color: #6699ff; }
+    70% { color: #9966ff; } 
+    80% { color: #cc66ff; } 
+    90% { color: #ff66cc; } 
+    100% { color: #ff6699; } 
+}
+    @media (max-width: 768px) {
+body {
+    width: 100%;
+    box-sizing: border-box;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10vh 0;
+}
+.title {
+    font-size: 17vw;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+.content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.story {
+    font-size: 5vw;
+    text-align: justify;
+    padding: 0 10px;
+}
+}
